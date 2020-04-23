@@ -1,1 +1,2 @@
-self  ansible_connection=local
+[dev-server]
+13.232.113.32
