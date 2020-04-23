@@ -1,0 +1,4 @@
+---
+nexus_username: admin
+nexus_pass: admin123
+#JAVA_HOME: /usr/lib/jvm/java-8-openjdk-amd64

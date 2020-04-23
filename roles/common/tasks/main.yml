@@ -1,0 +1,38 @@
+---
+- name: Install basic packages
+  package:
+    name: ["vim","wget","unzip","curl","git"]
+    state: present
+- name: Install java
+  apt:
+    name: "{{ jdk_version }}"
+    state: present
+- name: Add new group
+  group:
+    name: "{{ group_name }}"
+- name: Add new user
+  user:
+    name: "{{ user_name }}"
+    group: "{{ group_name }}"
+    home: "{{ base_dir }}"
+    createhome: no
+    system: yes
+- name: Download Tomcat
+  get_url:
+    url: "{{ tomcat_archive_url }}"
+    dest: "{{ tomcat_archive_dest }}"
+- name: Create a base directory for tomcat
+  file:
+    path: "{{ base_dir }}"
+    state: directory
+    owner: "{{ user_name }}"
+    group: "{{ group_name }}"
+- name: Extract tomcat archive
+  unarchive:
+    src: "{{ tomcat_archive_dest }}"
+    dest: "{{ base_dir }}"
+    owner: "{{ user_name }}"
+    group: "{{ group_name }}"
+    remote_src: yes
+    extra_opts: "--strip-components=1"
+    creates: "{{ base_dir }}/bin"

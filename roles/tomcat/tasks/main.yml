@@ -1,0 +1,45 @@
+---
+- name: Copy tomcat service file
+  template:
+    src: templates/tomcat.service.j2
+    dest: /etc/systemd/system/{{ service_name }}.service
+    owner: "{{ user_name }}"
+    group: "{{ group_name }}"
+    mode: 0744
+  when: ansible_service_mgr == "systemd"
+- name: Copy tomcat server.xml file
+  template:
+    src: templates/server.xml
+    dest: "{{ base_dir }}/conf/"
+  notify: restart service
+- name: copy tomcat-users.xml file
+  template: 
+    src: templates/tomcat-users.xml
+    dest: "{{ base_dir }}/conf/"
+  notify: restart service
+- name: Copy tomcat context.xml file
+  template:
+    src: templates/context.xml
+    dest: "{{ base_dir }}/webapps/host-manager/META-INF/"
+  notify: restart service
+  
+- name: Start and enable service for tomcat
+  service:
+    daemon_reload: yes
+    name: "{{ service_name }}"
+    state: started
+    enabled: yes
+  when: ansible_service_mgr == "systemd"
+- name: Download latest artifact from nexus
+  maven_artifact:
+    group_id: com.exapmle
+    artifact_id: java-maven
+    repository_url: 'http://localhost:8081/repository/maven-snapshots/'
+    username: "{{ nexus_username }}"
+    password: "{{ nexus_pass }}"
+    dest: /tmp/java-maven-latest.war
+- name: Deploy latest artifact
+  copy:
+    src: /tmp/java-maven-latest.war 
+    dest: "{{ base_dir }}/webapps/webapps.war"
+    owner: "{{ user_name }}"  
