@@ -1,0 +1,8 @@
+---
+- hosts: all
+  remote_user: ansadmin
+  become: yes
+  become_method: sudo
+  roles:
+    - roles/common      
+    - roles/tomcat
