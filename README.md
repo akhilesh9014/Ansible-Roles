@@ -41,9 +41,9 @@ The basic directory structure will look something like this:
 └── . . .
 ```
 
-# *if you know the my simple staging environments setup please click the [link](https://github.com/akhilesh9014/Ansible-multi-stage-Role.git) button 
+# *if you wish to know the my simple staging environments setup click the [link](https://github.com/akhilesh9014/Ansible-multi-stage-Role.git) button 
 
-actually here i was defined three stages ##DEV, ##QA, ##UAT
+actually here i was setup three stages #DEV, #QA, #UAT
 
 As you can see, each environment is distinct and compartmentalized. The environment directories contain an inventory file (arbitrarily named hosts) and a separate group_vars directory.
 
