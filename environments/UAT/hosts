@@ -1,1 +1,2 @@
-self  ansible_connection=local
+[uat-server]
+235.122.13.24
