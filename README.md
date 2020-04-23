@@ -41,7 +41,7 @@ The basic directory structure will look something like this:
 └── . . .
 ```
 
-# **if you know the my simple staging environments setup please click the [link](https://github.com/akhilesh9014/Ansible-multi-stage-Role.git) button 
+# *if you know the my simple staging environments setup please click the [link](https://github.com/akhilesh9014/Ansible-multi-stage-Role.git) button 
 
 actually here i was defined three stages ##DEV, ##QA, ##UAT
 
