@@ -5,4 +5,4 @@ tomcat_archive_dest: /tmp/apache-tomcat-{{ tomcat_ver }}.tar.gz
 http_port: 9090
 https_port: 9001
 admin_username: tomcat
-admin_password: admin123
+admin_password: tomcat1
