@@ -10,7 +10,7 @@ The recommended approach is to work with multistage environments by completely s
  
 The basic directory structure will look something like this: # :point_down:
 
-```+
+```
 .
 ├── ansible.cfg
 ├── environments/         # Parent directory for our environment-specific directories
@@ -39,7 +39,7 @@ The basic directory structure will look something like this: # :point_down:
 ├── playbook.yml
 │
 └── . . .
-```+
+```
 
 # *if you wish to know the my simple staging environments setup click the [link](https://github.com/akhilesh9014/Ansible-multi-stage-Role.git) :point_left: button 
 
