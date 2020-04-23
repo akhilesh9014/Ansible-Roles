@@ -74,7 +74,7 @@ cd all/
 ln -s ../../../000_cross_env_vars .
 ```
 When you have completed the above steps for each of your environments, your directory structure will look something like this: 
-                        :point_down:
+                  # :point_down:
 ```
 .
 ├── ansible.cfg
@@ -117,6 +117,7 @@ When you have completed the above steps for each of your environments, your dire
 The variables set within 000_cross_env_vars file will be available to each of the environments with a low priority.
 
 #Setting a Default Environment Inventory
+***
 It is possible to set a default inventory file in the ansible.cfg file. This is a good idea for a few reasons.
 
 First, it allows you to leave off explicit inventory flags to ansible and ansible-playbook. So instead of typing:
@@ -141,4 +142,5 @@ As mentioned above, it is recommended to set your development environment as the
 [defaults]
 inventory = ./environments/dev
 ```
-You should now be able to use your default inventory without the -i option. The non-default inventories will still require the use of -i, which helps protect them from accidental changes.
+You should now be able to use your default inventory without the -i option. The non-default inventories will still require the use of -i, which helps protect them from accidental changes...  :+2:
+:thumbsup::
