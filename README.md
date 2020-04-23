@@ -8,7 +8,7 @@ So far, we’ve looked at some strategies for managing multistage environments a
 
 The recommended approach is to work with multistage environments by completely separating each operating environment. Instead of maintaining all of your hosts within a single inventory file, an inventory is maintained for each of your individual environments. Separate group_vars directories are also maintained.
 
-The basic directory structure will look something like this:
+The basic directory structure will look something like this: # :point_down:
 
 ```
 .
@@ -41,7 +41,7 @@ The basic directory structure will look something like this:
 └── . . .
 ```
 
-# *if you wish to know the my simple staging environments setup click the [link](https://github.com/akhilesh9014/Ansible-multi-stage-Role.git) button 
+# *if you wish to know the my simple staging environments setup click the [link](https://github.com/akhilesh9014/Ansible-multi-stage-Role.git) :point_left: button 
 
 actually here i was setup three stages #DEV, #QA, #UAT
 
