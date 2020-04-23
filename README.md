@@ -8,3 +8,34 @@ The recommended approach is to work with multistage environments by completely s
 
 The basic directory structure will look something like this:
 
+```
+.
+├── ansible.cfg
+├── environments/         # Parent directory for our environment-specific directories
+│   │
+│   ├── dev/              # Contains all files specific to the dev environment
+│   │   ├── group_vars/   # dev specific group_vars files
+│   │   │   ├── all
+│   │   │   ├── db
+│   │   │   └── web
+│   │   └── hosts         # Contains only the hosts in the dev environment
+│   │
+│   ├── prod/             # Contains all files specific to the prod environment
+│   │   ├── group_vars/   # prod specific group_vars files
+│   │   │   ├── all
+│   │   │   ├── db
+│   │   │   └── web
+│   │   └── hosts         # Contains only the hosts in the prod environment
+│   │
+│   └── stage/            # Contains all files specific to the stage environment
+│       ├── group_vars/   # stage specific group_vars files
+│       │   ├── all
+│       │   ├── db
+│       │   └── web
+│       └── hosts         # Contains only the hosts in the stage environment
+│
+├── playbook.yml
+│
+└── . . .
+```
+
