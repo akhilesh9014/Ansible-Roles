@@ -73,8 +73,8 @@ Next, you can create a symbolic link to the cross-environmental variable file:
 cd all/
 ln -s ../../../000_cross_env_vars .
 ```
-When you have completed the above steps for each of your environments, your directory structure will look something like this:
-
+When you have completed the above steps for each of your environments, your directory structure will look something like this: 
+                        :point_down:
 ```
 .
 ├── ansible.cfg
