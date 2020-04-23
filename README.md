@@ -142,5 +142,5 @@ As mentioned above, it is recommended to set your development environment as the
 [defaults]
 inventory = ./environments/dev
 ```
-You should now be able to use your default inventory without the -i option. The non-default inventories will still require the use of -i, which helps protect them from accidental changes...  :+2:
-:thumbsup::
+You should now be able to use your default inventory without the -i option. The non-default inventories will still require the use of -i, which helps protect them from accidental changes... #   :+1:
+:thumbsup:
