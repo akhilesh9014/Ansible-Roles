@@ -51,7 +51,7 @@ There is some obvious duplication in the directory tree. There are web and db fi
 
 One limitation is the inability to select all hosts by function across environments. Fortunately, this falls into the same category as the variable duplication problem above. While it is occasionally useful to select all of your web servers for a task, you almost always want to roll out changes across your environments one at a time. This helps prevent mistakes from affecting your production environment.
 
-## Setting Cross-Environment Variables
+ ## :point_right: Setting Cross-Environment Variables
 One thing that is not possible in the recommended setup is variable sharing across environments. There are a number of ways we could implement cross-environment variable sharing. One of the simplest is to leverage Ansible’s ability to use directories in place of files. We can replace the all file within each group_vars directory with an all directory.
 
 Inside the directory, we can set all environment-specific variables in a file again. We can then create a symbolic link to a file location that contains cross-environment variables. Both of these will be applied to all hosts within the environment.
