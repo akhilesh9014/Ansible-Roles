@@ -1,0 +1,16 @@
+---
+JAVA_HOME: /usr/lib/jvm/java-11-openjdk-amd64
+tomcat_ver: 9.0.34
+tomcat_archive_url: http://apachemirror.wuchna.com/tomcat/tomcat-9/v{{ tomcat_ver }}/bin/apache-tomcat-{{ tomcat_ver }}.tar.gz
+tomcat_archive_dest: /tmp/apache-tomcat-{{ tomcat_ver }}.tar.gz
+http_port: 9596
+https_port: 9002
+user_name: tomcat2
+group_name: tomcat2
+base_dir: /usr/share/tomcat2
+service_name: tomcat-test
+jdk_version: openjdk-11-jdk
+shutdown_port: 8006
+ajp_port: 8010
+
+
