@@ -147,7 +147,7 @@ You should now be able to use your default inventory without the -i option. The 
 
 
 
-# Author Info
+# Author Info  :point_left:
 ---------------
 ## Posted by Akhilesh Kolipaka at april 24, 2020
 
