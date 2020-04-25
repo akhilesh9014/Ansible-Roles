@@ -123,9 +123,9 @@ It is possible to set a default inventory file in the ansible.cfg file. This is 
 First, it allows you to leave off explicit inventory flags to ansible and ansible-playbook. So instead of typing:
 ```
 ansible -i environments/dev -m ping
+```
+````
 You can access the default inventory by typing:
-```
-```
 ansible -m ping
 ```
 Secondly, setting a default inventory helps prevent unwanted changes from accidentally affecting staging or production environments. By defaulting to your development environment, the least important infrastructure is affected by changes. Promoting changes to new environments then is an explicit action that requires the -i flag.
